@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto;
+  width: 505px;
+
+
+  margin: 10px auto;
+}
