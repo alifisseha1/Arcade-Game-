@@ -2,13 +2,14 @@
 var Enemy = function(x,y,speed) {
   this.x = x;
   this.y = y;
+  this.sprite = 'images/enemy-bug.png';
   this.speed = speed;
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
+
 };
 let gameLost = document.getElementById('lost');
 let gameWon = document.getElementById('win');
@@ -59,7 +60,7 @@ Enemy.prototype.render = function() {
 var Player = function (x,y){
   this.x = x;
   this.y = y;
-  this.player = 'images/char-boy.png';
+  this.sprite = 'images/char-boy.png';
 }
 Player.prototype.update = function(dt){
 
@@ -69,7 +70,7 @@ Player.prototype.update = function(dt){
 // Place the player object in a variable called player
 
 Player.prototype.render = function(){
-  ctx.drawImage(Resources.get(this.player),this.x, this.y);
+  ctx.drawImage(Resources.get(this.sprite),this.x, this.y);
 }
 Player.prototype.handleInput = function(keyPress){
   if(keyPress =='left' && this.x > 0){
